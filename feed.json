@@ -2,8 +2,8 @@
     "version": "https://jsonfeed.org/version/1",
     "title": "Play with VisionOS, RealityKit &amp; Metal",
     "description": "",
-    "home_page_url": "https://igerard.github.io/splinevision",
-    "feed_url": "https://igerard.github.io/splinevision/feed.json",
+    "home_page_url": "https://igerard.github.io/splinesvision",
+    "feed_url": "https://igerard.github.io/splinesvision/feed.json",
     "user_comment": "",
     "author": {
         "name": "Gerard Iglesias"
