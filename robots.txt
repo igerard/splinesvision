@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://igerard.github.io/splinevision/sitemap.xml
