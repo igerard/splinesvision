@@ -286,6 +286,18 @@ figcaption {
 }
 
 /* ── Homepage ── */
+@keyframes blink-warning {
+  0%, 100% { color: #cc2200; }
+  50%       { color: #e6a800; }
+}
+
+.home-intro p.highlight {
+  font-size: 20px;
+  font-weight: 600;
+  animation: blink-warning 1s step-start infinite;
+}
+
+
 .home-header {
   padding-bottom: 40px;
   margin-bottom: 48px;
