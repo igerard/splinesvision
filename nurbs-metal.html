@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Computing NURBS — Gérard Iglesias</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+  <div class="site-bar">
+    <a href="index.html" class="site-bar-name">Curves on Surfaces</a>
+    <a href="index.html" class="back-btn">Retour</a>
+  </div>
+
+  <div class="page-header">
+    <div class="page-label">VisionOS Lab · 2026</div>
+    <h1>Computing NURBS</h1>
+    <div class="page-meta">
+      Metal compute shaders · B-Splines rationnelles
+      &nbsp;&nbsp;<span class="status todo">à venir</span>
+    </div>
+  </div>
+
+  <div class="body-text">
+    <h2>Ce que couvrira cet article</h2>
+    <p>
+      Implémentation des surfaces NURBS sur GPU via Metal compute shaders. 
+      De la représentation mathématique (bases B-splines, points de contrôle, 
+      poids) à l'évaluation parallèle sur des milliers de points simultanément.
+    </p>
+    <p>
+      La stratégie de précalcul matriciel par arc — héritée directement de 
+      l'implémentation ADA de 1992 — se transpose naturellement en uniform 
+      buffers Metal. L'évaluation <code>[1, u, u², u³] · M · P</code> 
+      devient un kernel embarrassingly parallel sur le GPU Apple Silicon.
+    </p>
+
+    <h3>Au programme</h3>
+    <p>
+      Bases B-splines : algorithme de Cox-de Boor vs précalcul matriciel. 
+      Surfaces NURBS biparamétriques. Calcul des normales et tangentes. 
+      Tessellation adaptative. Benchmarks 486 MHz vs Apple Silicon.
+    </p>
+
+    <div class="chips">
+      <span class="chip">NURBS</span>
+      <span class="chip">B-Splines</span>
+      <span class="chip">Metal MSL</span>
+      <span class="chip">Compute Shader</span>
+      <span class="chip">Tessellation</span>
+    </div>
+  </div>
+
+  <footer>
+    <span>Gérard Iglesias · 2026</span>
+    <a href="index.html">← Retour à l'accueil</a>
+  </footer>
+
+</div>
+</body>
+</html>

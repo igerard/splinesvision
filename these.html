@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Thèse — Gérard Iglesias</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+  <div class="site-bar">
+    <a href="index.html" class="site-bar-name">Curves on Surfaces</a>
+    <a href="index.html" class="back-btn">Retour</a>
+  </div>
+
+  <div class="page-header">
+    <div class="page-label">NURBS · 1992</div>
+    <h1>La Thèse</h1>
+    <div class="page-meta">Université Paris XI Orsay · 30 septembre 1992 · 129 pages</div>
+  </div>
+
+  <div class="cta-box">
+    <div class="cta-icon">📄</div>
+    <div class="cta-text">
+      <div class="cta-text-label">Document PDF</div>
+      <div class="cta-text-name">Modélisation surfacique et dessin de courbes sur surfaces</div>
+    </div>
+    <!-- PLACEHOLDER : remplacer href="#" par le vrai lien vers le PDF -->
+    <a href="#" class="cta-btn placeholder">Bientôt disponible</a>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="body-text">
+
+    <h2>Contexte</h2>
+    <p>
+      Cette thèse a été soutenue le 30 septembre 1992 à l'Université Paris XI Orsay, 
+      sous la direction d'<strong>André Gagalowicz</strong> (INRIA) avec l'encadrement 
+      de <strong>Sabine Coquillart</strong>. Le jury était présidé par <strong>Claude Puech</strong>, 
+      avec Peter Sander et Francis Schmitt comme rapporteurs.
+    </p>
+    <p>
+      Le travail a été réalisé en collaboration avec la société <strong>Stratégies</strong>, 
+      dans le cadre d'un projet de CAO pour l'industrie de la chaussure. L'implémentation 
+      production a été réalisée en <strong>ADA</strong> sur station de travail, avec un moteur 
+      d'affichage vectoriel et z-buffer développés entièrement à la main.
+    </p>
+
+    <h2>Sujet</h2>
+    <p>
+      Comment tracer des courbes esthétiques sur des surfaces 3D complexes en respectant 
+      la géométrie intrinsèque de la surface — indépendamment de sa paramétrisation ?
+    </p>
+    <p>
+      La réponse proposée est le <strong>trajet direct</strong> : l'intersection de la surface 
+      avec un plan défini par les deux points à joindre et leurs normales. Cette approche, 
+      naturelle géométriquement, s'applique à toute tessellation — NURBS ou subdivision surface.
+    </p>
+
+    <h2>Contributions principales</h2>
+
+    <h3>Modèle mathématique</h3>
+    <p>
+      Utilisation des surfaces NURBS (Non-Uniform Rational B-Splines) comme modèle de 
+      représentation. Calcul exact des normales et des dérivées depuis la représentation 
+      spline analytique, tessellation pour l'intersection.
+    </p>
+
+    <h3>Algorithme de trajet direct</h3>
+    <p>
+      Définition d'un arc sur la surface par 4 points : deux points de passage et deux 
+      directions tangentielles. Le trajet entre deux points est l'intersection de la 
+      surface avec le plan défini par <em>N<sub>pt</sub> = M<sub>p</sub>M<sub>t</sub> × (n<sub>p</sub> + n<sub>t</sub>)</em>.
+    </p>
+
+    <h3>Connexion d'arcs avec continuité G1</h3>
+    <p>
+      Connexion de plusieurs arcs en garantissant la continuité tangentielle par 
+      intersection du plan définissant la direction tangentielle précédente. 
+      Gestion interactive des points de passage et des discontinuités.
+    </p>
+
+    <h3>Repérage interactif sur surface</h3>
+    <p>
+      Ray casting avec raffinement par Newton-Raphson, quadtree sur le maillage 
+      pour l'accélération du picking. Isomorphisme local entre le plan tangent 
+      et la surface pour le calcul de proximité.
+    </p>
+
+    <div class="divider"></div>
+
+    <h2>Contexte matériel</h2>
+    <p>
+      L'implémentation a été réalisée sur des stations de travail Intel 486 — 
+      33 à 66 MHz, quelques mégaoctets de RAM. Les contraintes matérielles ont 
+      directement influencé l'architecture algorithmique : précalcul des matrices 
+      polynomiales par arc, représentation hybride spline/maillage, z-buffer 
+      entier codé à la main pour le rendu temps réel.
+    </p>
+
+    <div class="chips">
+      <span class="chip">NURBS</span>
+      <span class="chip">B-Splines</span>
+      <span class="chip">Géodésique</span>
+      <span class="chip">Plan sécant</span>
+      <span class="chip">Continuité G1</span>
+      <span class="chip">Ray casting</span>
+      <span class="chip">Newton-Raphson</span>
+      <span class="chip">ADA</span>
+      <span class="chip">Z-buffer</span>
+    </div>
+  </div>
+
+  <footer>
+    <span>Gérard Iglesias · 1992</span>
+    <a href="index.html">← Retour à l'accueil</a>
+  </footer>
+
+</div>
+</body>
+</html>

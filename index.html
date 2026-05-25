@@ -1,12 +1,388 @@
-<!DOCTYPE html><html lang="en-gb"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Play with VisionOS, RealityKit &amp; Metal</title><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="canonical" href="https://igerard.github.io/splinesvision/"><link rel="alternate" type="application/atom+xml" href="https://igerard.github.io/splinesvision/feed.xml" title="Play with VisionOS, RealityKit &amp; Metal - RSS"><link rel="alternate" type="application/json" href="https://igerard.github.io/splinesvision/feed.json" title="Play with VisionOS, RealityKit &amp; Metal - JSON"><meta property="og:title" content="Play with VisionOS, RealityKit & Metal"><meta property="og:site_name" content="Play with VisionOS, RealityKit & Metal"><meta property="og:description" content=""><meta property="og:url" content="https://igerard.github.io/splinesvision/"><meta property="og:type" content="website"><link rel="stylesheet" href="https://igerard.github.io/splinesvision/assets/css/style.css?v=a0ba884548820066dfadd8416036abba"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Organization","name":"Play with VisionOS, RealityKit & Metal","url":"https://igerard.github.io/splinesvision/"}</script><noscript><style>img[loading] {
-                    opacity: 1;
-                }</style></noscript></head><body class="home-template"><header class="top js-header"><a class="logo" href="https://igerard.github.io/splinesvision/">Play with VisionOS, RealityKit &amp; Metal</a></header><main><div class="hero hero--noimage"><header class="hero__content"><div class="wrapper"><h1>Discover My Blogging Journey: Adventures, Travels, and Hobbies!</h1><p>Join me as I share captivating stories, travel experiences, and dive into the joys of my favorite hobbies.</p><p><a href="#" class="btn">Read more</a></p></div></header></div><div class="wrapper feed"></div></main><footer class="footer"><div class="wrapper"><div class="footer__copyright">Powered by Publii</div><button id="backToTop" class="footer__bttop" aria-label="Back to top" title="Back to top"><svg width="20" height="20"><use xlink:href="https://igerard.github.io/splinesvision/assets/svg/svg-map.svg#toparrow"/></svg></button></div></footer><script defer="defer" src="https://igerard.github.io/splinesvision/assets/js/scripts.min.js?v=dafec4f87fead6718cb125f0b0fc8441"></script><script>window.publiiThemeMenuConfig={mobileMenuMode:'sidebar',animationSpeed:300,submenuWidth: 'auto',doubleClickTime:500,mobileMenuExpandableSubmenus:true,relatedContainerForOverlayMenuSelector:'.top'};</script><script>var images = document.querySelectorAll('img[loading]');
-        for (var i = 0; i < images.length; i++) {
-            if (images[i].complete) {
-                images[i].classList.add('is-loaded');
-            } else {
-                images[i].addEventListener('load', function () {
-                    this.classList.add('is-loaded');
-                }, false);
-            }
-        }</script></body></html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gérard Iglesias — Curves on Surfaces</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* ── Homepage spécifique ── */
+.home-header {
+  padding-bottom: 40px;
+  margin-bottom: 48px;
+  border-bottom: 1px solid var(--border);
+}
+
+.home-eyebrow {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 14px;
+}
+
+.home-title {
+  font-family: var(--serif);
+  font-size: clamp(32px, 6vw, 52px);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.home-title strong {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.home-name {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+  margin-bottom: 28px;
+}
+
+.home-intro {
+  font-size: 17px;
+  color: var(--text-mid);
+  max-width: 580px;
+  line-height: 1.8;
+}
+
+.home-intro p + p { margin-top: 14px; }
+
+/* Timeline */
+.timeline {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-top: 28px;
+  flex-wrap: wrap;
+  row-gap: 8px;
+}
+
+.tl-item {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.tl-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+.tl-label.highlight {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.tl-sep {
+  width: 20px;
+  height: 1px;
+  background: var(--border);
+  margin: 0 6px;
+}
+
+.tl-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin: 0 6px;
+}
+
+/* Nav sections */
+.nav-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nav-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border-light);
+}
+
+/* Page groups */
+.page-group { margin-bottom: 28px; }
+
+.group-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 18px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px 6px 0 0;
+}
+
+.group-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color: var(--text-dim);
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.group-title {
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  flex: 1;
+}
+
+.group-meta {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+}
+
+/* Page list */
+.page-list {
+  list-style: none;
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  overflow: hidden;
+}
+
+.page-item { border-top: 1px solid var(--border-light); }
+.page-item:first-child { border-top: none; }
+
+.page-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 11px 18px 11px 24px;
+  text-decoration: none;
+  color: var(--text);
+  transition: background 0.12s;
+}
+
+.page-link:hover { background: var(--bg2); }
+
+.page-link-icon {
+  font-size: 15px;
+  color: var(--text-dim);
+  width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.page-link-name {
+  font-family: var(--serif);
+  font-size: 16px;
+  flex: 1;
+  color: var(--text-mid);
+}
+
+.page-link:hover .page-link-name { color: var(--text); }
+
+.badge {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.badge.done {
+  color: var(--accent2);
+  border: 1px solid var(--accent2);
+}
+
+.badge.wip {
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.badge.soon {
+  color: var(--border);
+  border: 1px solid var(--border-light);
+  color: var(--text-dim);
+}
+
+.page-link-arrow {
+  color: var(--border);
+  font-size: 13px;
+  transition: transform 0.12s, color 0.12s;
+}
+
+.page-link:hover .page-link-arrow {
+  color: var(--text-dim);
+  transform: translateX(3px);
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header class="home-header">
+    <div class="home-eyebrow">gerardiglesias.github.io</div>
+    <h1 class="home-title">Curves on <strong>Surfaces</strong></h1>
+    <div class="home-name">Gérard Iglesias — Saint-Cannat, Provence</div>
+
+    <div class="home-intro">
+      <p>
+        En 1992, je soutenais à l'Université Paris XI Orsay une thèse sur la 
+        modélisation surfacique et le dessin de courbes sur surfaces NURBS — avec 
+        un algorithme de <em>trajet direct</em> par plan sécant, implémenté en ADA 
+        sur un Intel 486 avec un moteur d'affichage vectoriel et z-buffer écrits à la main.
+      </p>
+      <p>
+        Trente ans plus tard, le même problème géométrique trouve enfin le hardware 
+        qu'il méritait. Ce site documente le voyage — de 1985 à 2026.
+      </p>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <span class="tl-label">QL Sinclair 1985</span>
+        <span class="tl-sep"></span>
+      </div>
+      <div class="tl-item">
+        <span class="tl-label">Mathematica 1989</span>
+        <span class="tl-sep"></span>
+      </div>
+      <div class="tl-item">
+        <span class="tl-label">NeXTSTEP 1989</span>
+        <span class="tl-sep"></span>
+      </div>
+      <div class="tl-item">
+        <span class="tl-label">PostScript 1990</span>
+        <span class="tl-sep"></span>
+      </div>
+      <div class="tl-item">
+        <span class="tl-label">RenderMan 1991</span>
+        <span class="tl-sep"></span>
+      </div>
+      <div class="tl-item">
+        <span class="tl-label">Thèse 1992</span>
+        <span class="tl-sep"></span>
+      </div>
+      <div class="tl-item">
+        <span class="tl-dot"></span>
+        <span class="tl-label highlight">VisionOS 2026</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-label">Contenus</div>
+
+    <!-- NURBS -->
+    <div class="page-group">
+      <div class="group-header">
+        <div class="group-icon">◈</div>
+        <div class="group-title">NURBS</div>
+        <div class="group-meta">Fondations théoriques · 1992</div>
+      </div>
+      <ul class="page-list">
+        <li class="page-item">
+          <a href="these.html" class="page-link">
+            <span class="page-link-icon">📄</span>
+            <span class="page-link-name">La Thèse</span>
+            <span class="badge done">disponible</span>
+            <span class="page-link-arrow">›</span>
+          </a>
+        </li>
+        <li class="page-item">
+          <a href="mathematica.html" class="page-link">
+            <span class="page-link-icon">∑</span>
+            <span class="page-link-name">Mathematica</span>
+            <span class="badge done">disponible</span>
+            <span class="page-link-arrow">›</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- VisionOS -->
+    <div class="page-group">
+      <div class="group-header">
+        <div class="group-icon">◎</div>
+        <div class="group-title">VisionOS Lab</div>
+        <div class="group-meta">Implémentation moderne · 2026</div>
+      </div>
+      <ul class="page-list">
+        <li class="page-item">
+          <a href="architecture.html" class="page-link">
+            <span class="page-link-icon">⬡</span>
+            <span class="page-link-name">Architecture</span>
+            <span class="badge wip">en cours</span>
+            <span class="page-link-arrow">›</span>
+          </a>
+        </li>
+        <li class="page-item">
+          <a href="nurbs-metal.html" class="page-link">
+            <span class="page-link-icon">▦</span>
+            <span class="page-link-name">Computing NURBS</span>
+            <span class="badge soon">à venir</span>
+            <span class="page-link-arrow">›</span>
+          </a>
+        </li>
+        <li class="page-item">
+          <a href="subdivision.html" class="page-link">
+            <span class="page-link-icon">◻</span>
+            <span class="page-link-name">Computing Subdivision Surface</span>
+            <span class="badge soon">à venir</span>
+            <span class="page-link-arrow">›</span>
+          </a>
+        </li>
+        <li class="page-item">
+          <a href="picking.html" class="page-link">
+            <span class="page-link-icon">⊕</span>
+            <span class="page-link-name">Hitting Surface</span>
+            <span class="badge soon">à venir</span>
+            <span class="page-link-arrow">›</span>
+          </a>
+        </li>
+        <li class="page-item">
+          <a href="curves.html" class="page-link">
+            <span class="page-link-icon">∿</span>
+            <span class="page-link-name">Curves on Surface</span>
+            <span class="badge soon">à venir</span>
+            <span class="page-link-arrow">›</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <footer>
+    <span>Gérard Iglesias · Saint-Cannat · 2026</span>
+    <span>
+      <a href="https://github.com/gerardiglesias" target="_blank">github</a>
+      &nbsp;·&nbsp;
+      <a href="https://www.linkedin.com/in/gerardiglesias/" target="_blank">linkedin</a>
+    </span>
+  </footer>
+
+</div>
+</body>
+</html>

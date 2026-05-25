@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Curves on Surface — Gérard Iglesias</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="site-bar">
+    <a href="index.html" class="site-bar-name">Curves on Surfaces</a>
+    <a href="index.html" class="back-btn">Retour</a>
+  </div>
+  <div class="page-header">
+    <div class="page-label">VisionOS Lab · 2026</div>
+    <h1>Curves on Surface</h1>
+    <div class="page-meta">Trajet direct · Plan sécant · Continuité G1 &nbsp;&nbsp;<span class="status todo">à venir</span></div>
+  </div>
+  <div class="body-text">
+    <h2>L'algorithme central</h2>
+    <p>C'est le cœur du projet — et le sujet de la thèse de 1992. Tracer une courbe entre deux points sur une surface 3D en respectant la géométrie intrinsèque, sans dépendre de la paramétrisation.</p>
+    <p>Le <strong>trajet direct</strong> : intersection de la surface avec le plan défini par les deux points à joindre et leurs normales. <em>N<sub>pt</sub> = M<sub>p</sub>M<sub>t</sub> × (n<sub>p</sub> + n<sub>t</sub>)</em>. Simple à calculer sur le maillage, agnostique quant au type de surface.</p>
+    <p>La connexion de plusieurs arcs avec continuité G1 automatique : la direction tangentielle de l'arc suivant est définie par intersection du plan prolongeant la direction tangentielle précédente.</p>
+    <h3>Au programme</h3>
+    <p>Implémentation complète de l'algorithme de trajet direct sur GPU. Création interactive d'arcs par désignation des points de passage avec les mains. Connexion automatique G1 entre arcs. Export des courbes en USD BasisCurves. Démonstration sur surface NURBS et subdivision.</p>
+    <div class="chips">
+      <span class="chip">Trajet Direct</span>
+      <span class="chip">Plan Sécant</span>
+      <span class="chip">Continuité G1</span>
+      <span class="chip">USD BasisCurves</span>
+      <span class="chip">Hand Tracking</span>
+      <span class="chip">Metal</span>
+    </div>
+  </div>
+  <footer>
+    <span>Gérard Iglesias · 2026</span>
+    <a href="index.html">← Retour à l'accueil</a>
+  </footer>
+</div>
+</body>
+</html>

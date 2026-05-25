@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hitting Surface — Gérard Iglesias</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="site-bar">
+    <a href="index.html" class="site-bar-name">Curves on Surfaces</a>
+    <a href="index.html" class="back-btn">Retour</a>
+  </div>
+  <div class="page-header">
+    <div class="page-label">VisionOS Lab · 2026</div>
+    <h1>Hitting Surface</h1>
+    <div class="page-meta">Ray casting · Newton-Raphson · Hand Tracking &nbsp;&nbsp;<span class="status todo">à venir</span></div>
+  </div>
+  <div class="body-text">
+    <h2>Le problème du picking en spatial computing</h2>
+    <p>Identifier le point exact sur une surface 3D désigné par un geste de la main dans l'espace — avec la normale au point d'impact — est la brique fondamentale du labo. Sans picking précis, impossible de placer les points de passage des courbes.</p>
+    <p>La thèse de 1992 décrivait déjà ce problème : ray casting avec raffinement Newton-Raphson, quadtree sur le maillage pour l'accélération. La même approche, portée sur GPU et adaptée au hand tracking visionOS.</p>
+    <h3>Au programme</h3>
+    <p>Ray casting GPU depuis la position de la main. Accélération par BVH (Bounding Volume Hierarchy). Raffinement Newton-Raphson pour la précision sub-pixel. Retour haptique et visuel sur le point touché. Isomorphisme local plan tangent / surface pour la manipulation.</p>
+    <div class="chips">
+      <span class="chip">Ray Casting</span>
+      <span class="chip">Newton-Raphson</span>
+      <span class="chip">BVH</span>
+      <span class="chip">Hand Tracking</span>
+      <span class="chip">Metal</span>
+    </div>
+  </div>
+  <footer>
+    <span>Gérard Iglesias · 2026</span>
+    <a href="index.html">← Retour à l'accueil</a>
+  </footer>
+</div>
+</body>
+</html>

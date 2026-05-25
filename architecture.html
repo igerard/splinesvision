@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Architecture — Gérard Iglesias</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+  <div class="site-bar">
+    <a href="index.html" class="site-bar-name">Curves on Surfaces</a>
+    <a href="index.html" class="back-btn">Retour</a>
+  </div>
+
+  <div class="page-header">
+    <div class="page-label">VisionOS Lab · 2026</div>
+    <h1>Architecture</h1>
+    <div class="page-meta">
+      Swift · RealityKit · Metal · visionOS
+      &nbsp;&nbsp;<span class="status wip">en cours</span>
+    </div>
+  </div>
+
+  <div class="body-text">
+
+    <h2>Vision générale</h2>
+    <p>
+      Le labo est une application visionOS permettant de tracer des courbes 
+      esthétiques sur des surfaces 3D directement avec les mains — en respectant 
+      la géométrie intrinsèque de la surface, indépendamment de sa représentation 
+      sous-jacente (NURBS ou subdivision surface).
+    </p>
+    <p>
+      L'idée centrale, identifiée dans la thèse de 1992 : l'algorithme de 
+      <strong>trajet direct par plan sécant</strong> opère sur le maillage de 
+      tessellation. Il est donc <strong>agnostique</strong> quant à l'origine 
+      de la géométrie — NURBS, Catmull-Clark, mesh importé.
+    </p>
+
+    <h2>Abstraction centrale</h2>
+    <p>
+      Un protocol Swift définit le contrat minimal qu'un modèle géométrique 
+      doit satisfaire pour être utilisable par l'algorithme de courbes :
+    </p>
+    <pre>protocol GeometricSurface {
+    // Tessellation pour l'intersection
+    var mesh: MeshDescriptor { get }
+
+    // Dérivées premières au point (u, v)
+    func evaluate(u: Float, v: Float) -> SurfacePoint
+    func normal(u: Float, v: Float) -> SIMD3&lt;Float&gt;
+    func tangents(u: Float, v: Float) -> (du: SIMD3&lt;Float&gt;, dv: SIMD3&lt;Float&gt;)
+}</pre>
+    <p>
+      Deux implémentations concrètes : <code>NURBSSurface</code> 
+      et <code>SubdivisionSurface</code> (Catmull-Clark).
+    </p>
+
+    <h2>Stack technique</h2>
+
+    <h3>Couche calcul — Metal compute shaders</h3>
+    <p>
+      Évaluation parallèle des points de la surface, calcul des normales, 
+      intersection plan/maillage. Les matrices d'arc précalculées (héritage 
+      direct de l'approche 1992) sont stockées en uniform buffers GPU.
+    </p>
+
+    <h3>Couche scène — RealityKit</h3>
+    <p>
+      Rendu de la surface, visualisation des courbes comme 
+      <code>MeshResource</code> avec <code>BasisCurves</code> USD natifs. 
+      Gestion des entités et du world anchor en espace mixte.
+    </p>
+
+    <h3>Couche interaction — visionOS</h3>
+    <p>
+      Hand tracking pour la manipulation des points de contrôle. 
+      Eye tracking + pinch pour le picking sur surface. 
+      Les normales exactes issues du modèle géométrique guident 
+      la projection des gestes sur la surface.
+    </p>
+
+    <h2>Workflow utilisateur</h2>
+    <p>
+      L'utilisateur importe une surface 3D (USDZ, OBJ, ou modèle natif), 
+      la pose dans son espace physique, puis trace des courbes en désignant 
+      des points de passage avec ses mains. Les arcs se connectent avec 
+      continuité G1 automatique.
+    </p>
+
+    <div class="chips">
+      <span class="chip">Swift</span>
+      <span class="chip">RealityKit</span>
+      <span class="chip">Metal</span>
+      <span class="chip">visionOS</span>
+      <span class="chip">Hand Tracking</span>
+      <span class="chip">USD / USDZ</span>
+      <span class="chip">Compute Shaders</span>
+    </div>
+
+  </div>
+
+  <footer>
+    <span>Gérard Iglesias · 2026</span>
+    <a href="index.html">← Retour à l'accueil</a>
+  </footer>
+
+</div>
+</body>
+</html>
