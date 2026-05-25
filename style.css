@@ -285,6 +285,237 @@ figcaption {
   border: 1px solid var(--border);
 }
 
+/* ── Homepage ── */
+.home-header {
+  padding-bottom: 40px;
+  margin-bottom: 48px;
+  border-bottom: 1px solid var(--border);
+}
+
+.home-eyebrow {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 14px;
+}
+
+.home-title {
+  font-family: var(--serif);
+  font-size: clamp(32px, 6vw, 52px);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.home-title strong {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.home-name {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+  margin-bottom: 28px;
+}
+
+.home-intro {
+  font-size: 17px;
+  color: var(--text-mid);
+  max-width: 580px;
+  line-height: 1.8;
+}
+
+.home-intro p + p { margin-top: 14px; }
+
+/* Timeline */
+.timeline {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-top: 28px;
+  flex-wrap: wrap;
+  row-gap: 8px;
+}
+
+.tl-item {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.tl-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+.tl-label.highlight {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.tl-sep {
+  width: 20px;
+  height: 1px;
+  background: var(--border);
+  margin: 0 6px;
+}
+
+.tl-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin: 0 6px;
+}
+
+/* Nav sections */
+.nav-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nav-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border-light);
+}
+
+/* Page groups */
+.page-group { margin-bottom: 28px; }
+
+.group-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 18px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px 6px 0 0;
+}
+
+.group-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color: var(--text-dim);
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.group-title {
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  flex: 1;
+}
+
+.group-meta {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+}
+
+/* Page list */
+.page-list {
+  list-style: none;
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  overflow: hidden;
+}
+
+.page-item { border-top: 1px solid var(--border-light); }
+.page-item:first-child { border-top: none; }
+
+.page-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 11px 18px 11px 24px;
+  text-decoration: none;
+  color: var(--text);
+  transition: background 0.12s;
+}
+
+.page-link:hover { background: var(--bg2); }
+
+.page-link-icon {
+  font-size: 15px;
+  color: var(--text-dim);
+  width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.page-link-name {
+  font-family: var(--serif);
+  font-size: 16px;
+  flex: 1;
+  color: var(--text-mid);
+}
+
+.page-link:hover .page-link-name { color: var(--text); }
+
+.badge {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.badge.done {
+  color: var(--accent2);
+  border: 1px solid var(--accent2);
+}
+
+.badge.wip {
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.badge.soon {
+  color: var(--border);
+  border: 1px solid var(--border-light);
+  color: var(--text-dim);
+}
+
+.page-link-arrow {
+  color: var(--border);
+  font-size: 13px;
+  transition: transform 0.12s, color 0.12s;
+}
+
+.page-link:hover .page-link-arrow {
+  color: var(--text-dim);
+  transform: translateX(3px);
+}
+
 /* ── Footer ── */
 footer {
   margin-top: 64px;
