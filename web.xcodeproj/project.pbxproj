@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		D50E27882FC45334006A1F1F /* LaThese_modern.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = LaThese_modern.pdf; sourceTree = "<group>"; };
 		D523FFB92FC433E30065CDA0 /* architecture.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = architecture.html; sourceTree = "<group>"; };
 		D523FFBA2FC433E30065CDA0 /* curves.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = curves.html; sourceTree = "<group>"; };
 		D523FFBB2FC433E30065CDA0 /* doctorate-thesis.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "doctorate-thesis.html"; sourceTree = "<group>"; };
@@ -21,9 +22,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		D50E27892FC45334006A1F1F /* docs */ = {
+			isa = PBXGroup;
+			children = (
+				D50E27882FC45334006A1F1F /* LaThese_modern.pdf */,
+			);
+			path = docs;
+			sourceTree = "<group>";
+		};
 		D523FFB22FC433A70065CDA0 = {
 			isa = PBXGroup;
 			children = (
+				D50E27892FC45334006A1F1F /* docs */,
 				D523FFB92FC433E30065CDA0 /* architecture.html */,
 				D523FFBA2FC433E30065CDA0 /* curves.html */,
 				D523FFBB2FC433E30065CDA0 /* doctorate-thesis.html */,
