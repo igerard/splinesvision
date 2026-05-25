@@ -1,0 +1,105 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXFileReference section */
+		D523FFB92FC433E30065CDA0 /* architecture.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = architecture.html; sourceTree = "<group>"; };
+		D523FFBA2FC433E30065CDA0 /* curves.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = curves.html; sourceTree = "<group>"; };
+		D523FFBB2FC433E30065CDA0 /* doctorate-thesis.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "doctorate-thesis.html"; sourceTree = "<group>"; };
+		D523FFBC2FC433E30065CDA0 /* CourbeEtDescripteur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CourbeEtDescripteur.png; sourceTree = "<group>"; };
+		D523FFBE2FC433E30065CDA0 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		D523FFBF2FC433E30065CDA0 /* mathematica.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = mathematica.html; sourceTree = "<group>"; };
+		D523FFC02FC433E30065CDA0 /* nurbs-metal.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "nurbs-metal.html"; sourceTree = "<group>"; };
+		D523FFC12FC433E30065CDA0 /* picking.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = picking.html; sourceTree = "<group>"; };
+		D523FFC22FC433E30065CDA0 /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
+		D523FFC32FC433E30065CDA0 /* subdivision.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = subdivision.html; sourceTree = "<group>"; };
+		D523FFC42FC433E30065CDA0 /* these.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = these.html; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		D523FFB22FC433A70065CDA0 = {
+			isa = PBXGroup;
+			children = (
+				D523FFB92FC433E30065CDA0 /* architecture.html */,
+				D523FFBA2FC433E30065CDA0 /* curves.html */,
+				D523FFBB2FC433E30065CDA0 /* doctorate-thesis.html */,
+				D523FFBD2FC433E30065CDA0 /* img */,
+				D523FFBE2FC433E30065CDA0 /* index.html */,
+				D523FFBF2FC433E30065CDA0 /* mathematica.html */,
+				D523FFC02FC433E30065CDA0 /* nurbs-metal.html */,
+				D523FFC12FC433E30065CDA0 /* picking.html */,
+				D523FFC22FC433E30065CDA0 /* style.css */,
+				D523FFC32FC433E30065CDA0 /* subdivision.html */,
+				D523FFC42FC433E30065CDA0 /* these.html */,
+			);
+			sourceTree = "<group>";
+		};
+		D523FFBD2FC433E30065CDA0 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				D523FFBC2FC433E30065CDA0 /* CourbeEtDescripteur.png */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		D523FFB32FC433A70065CDA0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 2650;
+			};
+			buildConfigurationList = D523FFB62FC433A70065CDA0 /* Build configuration list for PBXProject "splinesvisionweb" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D523FFB22FC433A70065CDA0;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		D523FFB72FC433A70065CDA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = JLW43DLDF7;
+			};
+			name = Debug;
+		};
+		D523FFB82FC433A70065CDA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = JLW43DLDF7;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D523FFB62FC433A70065CDA0 /* Build configuration list for PBXProject "splinesvisionweb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D523FFB72FC433A70065CDA0 /* Debug */,
+				D523FFB82FC433A70065CDA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D523FFB32FC433A70065CDA0 /* Project object */;
+}

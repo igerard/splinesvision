@@ -304,6 +304,23 @@ figcaption {
   border-bottom: 1px solid var(--border);
 }
 
+.home-title-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.home-title-text { flex: 1; }
+
+.home-thumb {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
 .home-eyebrow {
   font-family: var(--mono);
   font-size: 10px;
