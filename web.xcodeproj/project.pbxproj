@@ -55,7 +55,7 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 2650;
 			};
-			buildConfigurationList = D523FFB62FC433A70065CDA0 /* Build configuration list for PBXProject "splinesvisionweb" */;
+			buildConfigurationList = D523FFB62FC433A70065CDA0 /* Build configuration list for PBXProject "web" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -90,7 +90,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D523FFB62FC433A70065CDA0 /* Build configuration list for PBXProject "splinesvisionweb" */ = {
+		D523FFB62FC433A70065CDA0 /* Build configuration list for PBXProject "web" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D523FFB72FC433A70065CDA0 /* Debug */,
