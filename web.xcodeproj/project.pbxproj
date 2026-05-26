@@ -10,7 +10,6 @@
 		D50E27882FC45334006A1F1F /* LaThese_modern.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = LaThese_modern.pdf; sourceTree = "<group>"; };
 		D523FFB92FC433E30065CDA0 /* architecture.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = architecture.html; sourceTree = "<group>"; };
 		D523FFBA2FC433E30065CDA0 /* curves.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = curves.html; sourceTree = "<group>"; };
-		D523FFBB2FC433E30065CDA0 /* doctorate-thesis.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "doctorate-thesis.html"; sourceTree = "<group>"; };
 		D523FFBC2FC433E30065CDA0 /* CourbeEtDescripteur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CourbeEtDescripteur.png; sourceTree = "<group>"; };
 		D523FFBE2FC433E30065CDA0 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		D523FFBF2FC433E30065CDA0 /* mathematica.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = mathematica.html; sourceTree = "<group>"; };
@@ -19,6 +18,7 @@
 		D523FFC22FC433E30065CDA0 /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
 		D523FFC32FC433E30065CDA0 /* subdivision.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = subdivision.html; sourceTree = "<group>"; };
 		D523FFC42FC433E30065CDA0 /* these.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = these.html; sourceTree = "<group>"; };
+		D55CDD112FC58B2100171400 /* Mathematica_NeXTStep_Floppy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mathematica_NeXTStep_Floppy.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -36,7 +36,6 @@
 				D50E27892FC45334006A1F1F /* docs */,
 				D523FFB92FC433E30065CDA0 /* architecture.html */,
 				D523FFBA2FC433E30065CDA0 /* curves.html */,
-				D523FFBB2FC433E30065CDA0 /* doctorate-thesis.html */,
 				D523FFBD2FC433E30065CDA0 /* img */,
 				D523FFBE2FC433E30065CDA0 /* index.html */,
 				D523FFBF2FC433E30065CDA0 /* mathematica.html */,
@@ -51,6 +50,7 @@
 		D523FFBD2FC433E30065CDA0 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				D55CDD112FC58B2100171400 /* Mathematica_NeXTStep_Floppy.png */,
 				D523FFBC2FC433E30065CDA0 /* CourbeEtDescripteur.png */,
 			);
 			path = img;
