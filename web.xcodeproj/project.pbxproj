@@ -19,6 +19,7 @@
 		D523FFC32FC433E30065CDA0 /* subdivision.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = subdivision.html; sourceTree = "<group>"; };
 		D523FFC42FC433E30065CDA0 /* these.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = these.html; sourceTree = "<group>"; };
 		D55CDD112FC58B2100171400 /* Mathematica_NeXTStep_Floppy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mathematica_NeXTStep_Floppy.png; sourceTree = "<group>"; };
+		D55CDD272FCD70FC00171400 /* ql-sinclair.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "ql-sinclair.html"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -33,14 +34,15 @@
 		D523FFB22FC433A70065CDA0 = {
 			isa = PBXGroup;
 			children = (
-				D50E27892FC45334006A1F1F /* docs */,
 				D523FFB92FC433E30065CDA0 /* architecture.html */,
 				D523FFBA2FC433E30065CDA0 /* curves.html */,
+				D50E27892FC45334006A1F1F /* docs */,
 				D523FFBD2FC433E30065CDA0 /* img */,
 				D523FFBE2FC433E30065CDA0 /* index.html */,
 				D523FFBF2FC433E30065CDA0 /* mathematica.html */,
 				D523FFC02FC433E30065CDA0 /* nurbs-metal.html */,
 				D523FFC12FC433E30065CDA0 /* picking.html */,
+				D55CDD272FCD70FC00171400 /* ql-sinclair.html */,
 				D523FFC22FC433E30065CDA0 /* style.css */,
 				D523FFC32FC433E30065CDA0 /* subdivision.html */,
 				D523FFC42FC433E30065CDA0 /* these.html */,
