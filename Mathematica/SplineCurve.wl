@@ -1,5 +1,9 @@
 (* ::Package:: *)
 
+(* Copyright 1992-2026 Visual Science. *)
+(* by Gerard Iglesias *)
+
+SetDirectory[NotebookDirectory[]];
 BeginPackage["SplineCurve`","BSpline`"]
 
 Sp::usage=

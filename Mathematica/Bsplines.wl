@@ -1,12 +1,7 @@
 (* ::Package:: *)
 
-(* ::Package:: *)
-(* Copyright 1992 Visual Corporation. *)
-(*   1992 - 2026   *)
-
-(* Bspline Definitions *)
-
-(* by G\[EAcute]rard Iglesias *)
+(* Copyright 1992-2026 Visual Science. *)
+(* by Gerard Iglesias *)
 
 BeginPackage["BSpline`"]
 

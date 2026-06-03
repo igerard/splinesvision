@@ -22,12 +22,10 @@
 
   <div class="body-text">
 
-    <h2>Origine</h2>
     <p>
-      Dès 1989, j'ai accès à
-      <strong>Mathematica 1.2</strong> — d'abord via le kernel distant de l'INRIA
-      à Sophia-Antipolis sous X Window, puis localement sur un <strong>Mac SE/30</strong>. 
-      Sur NeXTStation plus tard dans le cadre d'un développement de plugin pour une application de modélisation 3D sous NeXTStep.
+      Accès à <strong>Mathematica 1.2</strong> dès 1989 — kernel distant de
+      l'INRIA Sophia-Antipolis sous X Window, puis Mac SE/30, puis NeXTstation.
+      Outil de prototypage symbolique pour la thèse NURBS et au-delà.
     </p>
 
     <figure>
@@ -35,64 +33,72 @@
       <figcaption>Mathematica sur NeXTSTEP — disquette d'installation</figcaption>
     </figure>
 
+    <div class="divider"></div>
+
+    <h2>Études B-Splines — début des années 90</h2>
     <p>
-      Mathematica devient mon outil de prototypage symbolique : valider les formules 
-      différentielles des NURBS, vérifier les conditions de continuité G1/G2, 
-      visualiser les courbes avant de les implémenter en ADA. 
-      Un oracle mathématique avant l'implémentation production.
+      Nettoyage récent de mes premiers travaux : packages
+      <code>BSpline\`</code> (bases <code>Bs[i,k,n][u]</code>, division
+      sécurisée <code>dz</code>) et <code>SplineCurve\`</code>
+      (<code>Sp</code> pour courbes et surfaces, <code>Draw</code>, dérivées
+      symboliques), avec un notebook de démonstration.
     </p>
 
-    <h2>Les notebooks — 1992</h2>
+    <div class="cta-box">
+      <div class="cta-icon">∑</div>
+      <div class="cta-text">
+        <div class="cta-text-label">Package Wolfram</div>
+        <div class="cta-text-name">BSpline — bases <code>Bs</code> et <code>dz</code></div>
+      </div>
+      <a href="Mathematica/Bsplines.wl" class="cta-btn" download>Télécharger .wl</a>
+    </div>
 
-    <h3>TheBsplines.ma</h3>
-    <p>
-      Tutoriel pédagogique en anglais. Construction progressive des bases B-splines, 
-      des matrices polynomiales par arc, des objets Spline. 
-      Pensé pour illustrer la thèse.
-    </p>
+    <div class="cta-box">
+      <div class="cta-icon">∿</div>
+      <div class="cta-text">
+        <div class="cta-text-label">Package Wolfram</div>
+        <div class="cta-text-name">SplineCurve — <code>Sp</code>, <code>Draw</code>, dérivées</div>
+      </div>
+      <a href="Mathematica/SplineCurve.wl" class="cta-btn" download>Télécharger .wl</a>
+    </div>
 
-    <h3>SplinesObjet.ma</h3>
-    <p>
-      Package orienté objet avec trois classes : <code>Spline</code>, 
-      <code>CourbeSpline</code>, <code>CourbeSplineR</code> (rationnelle/NURBS). 
-      Précalcul des matrices d'arc pour évaluation rapide — 
-      <code>[1, u, u², u³] · M · P</code> — optimisation critique sur Intel 486.
-    </p>
+    <div class="cta-box">
+      <div class="cta-icon">▶</div>
+      <div class="cta-text">
+        <div class="cta-text-label">Notebook</div>
+        <div class="cta-text-name">B-splines — démo</div>
+      </div>
+      <a href="Mathematica/Bsplines_Demo.nb" class="cta-btn" download>Télécharger .nb</a>
+    </div>
 
-    <h3>SimpleBsplines.ma</h3>
-    <p>
-      L'approche symbolique fonctionnelle : <code>Sp[k,n,coords][u]</code> 
-      directement évaluable, dérivées formelles automatiques, surfaces 
-      <code>Sp[k,h,knotsU,knotsV,coords][u,v]</code>. 
-      Interpolation avec paramétrisations chord-length et centripète.
-    </p>
+    <div class="divider"></div>
 
-    <h2>Le package — 2004</h2>
+    <h2>Reformulation — conférence Mathematica Paris, 6 octobre 2004</h2>
     <p>
-      À l'occasion de la <strong>conférence Mathematica parisienne du 6 octobre 2004</strong>, 
-      invitation d'Eric Jacopin, je produis un package propre et modulaire :
-    </p>
-    <pre>BSpline`              → bases Bs, division sécurisée dz
-SplineCurve`          → Sp (courbes et surfaces), Draw
-SplineInterpolation`  → SplineFit avec stratégies pluggables</pre>
-    <p>
-      Architecture en trois packages avec dépendances explicites 
-      (<code>BeginPackage["SplineCurve`","BSpline`"]</code>). 
-      Stratégies d'interpolation pluggables : <code>cordLengthKnots</code>, 
-      <code>centripeteKnots</code>, conditions aux bords <code>V=0</code>, <code>A=0</code>.
+      À l'invitation d'Eric Jacopin pour la conférence Mathematica parisienne,
+      reformulation de mes apprentissages sur les splines en un document
+      unique, avec un soin particulier porté à la notation pour coller
+      au plus près à la symbolique mathématique standard.
     </p>
 
-    <h2>Bayes — 2020</h2>
+    <div class="cta-box">
+      <div class="cta-icon">∫</div>
+      <div class="cta-text">
+        <div class="cta-text-label">Notebook</div>
+        <div class="cta-text-name">BSpline — paper (2004)</div>
+      </div>
+      <a href="Mathematica/BSpline-paper.nb" class="cta-btn" download>Télécharger .nb</a>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Théorème de Bayes — 2020</h2>
     <p>
-      En 2020, dans le cadre d'un atelier IA, 
-      je réalise deux notebooks pédagogiques sur le théorème de Bayes — 
-      en utilisant mon chat noir comme cas de test pour les probabilités conditionnelles.
-    </p>
-    <p>
-      <strong>Bayesian-Coin_Demo.nb</strong> : mise à jour bayésienne interactive, 
-      distribution Beta comme prior conjuguée, widgets Manipulate. 
-      <strong>Bayesian-Digit_Demo.nb</strong> : classifieur Naïve Bayes pour la 
-      reconnaissance de chiffres manuscrits, construit depuis les équations.
+      Dans le cadre d'un atelier IA, deux notebooks pédagogiques construits
+      depuis les équations. <strong>Bayesian-Coin_Demo.nb</strong> : mise à
+      jour bayésienne interactive, distribution Beta comme prior conjuguée.
+      <strong>Bayesian-Digit_Demo.nb</strong> : classifieur Naïve Bayes pour
+      la reconnaissance de chiffres manuscrits.
     </p>
 
     <div class="chips">
