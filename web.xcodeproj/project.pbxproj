@@ -21,10 +21,7 @@
 		D54BAD1C2FD0538200957343 /* BSpline-paper.nb */ = {isa = PBXFileReference; lastKnownFileType = text; path = "BSpline-paper.nb"; sourceTree = "<group>"; };
 		D54BAD1D2FD0538200957343 /* Bsplines.wl */ = {isa = PBXFileReference; lastKnownFileType = text; path = Bsplines.wl; sourceTree = "<group>"; };
 		D54BAD1E2FD0538200957343 /* Bsplines_Demo.nb */ = {isa = PBXFileReference; lastKnownFileType = text; path = Bsplines_Demo.nb; sourceTree = "<group>"; };
-		D54BAD1F2FD0538200957343 /* Interpol_Bspline.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Interpol_Bspline.pdf; sourceTree = "<group>"; };
 		D54BAD202FD0538200957343 /* SplineCurve.wl */ = {isa = PBXFileReference; lastKnownFileType = text; path = SplineCurve.wl; sourceTree = "<group>"; };
-		D54BAD212FD0538200957343 /* SplineInterpolation.wl */ = {isa = PBXFileReference; lastKnownFileType = text; path = SplineInterpolation.wl; sourceTree = "<group>"; };
-		D54BAD222FD0538200957343 /* The B-Spline.nb */ = {isa = PBXFileReference; lastKnownFileType = text; path = "The B-Spline.nb"; sourceTree = "<group>"; };
 		D55CDD112FC58B2100171400 /* Mathematica_NeXTStep_Floppy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mathematica_NeXTStep_Floppy.png; sourceTree = "<group>"; };
 		D55CDD272FCD70FC00171400 /* ql-sinclair.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "ql-sinclair.html"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,10 +69,7 @@
 				D54BAD1C2FD0538200957343 /* BSpline-paper.nb */,
 				D54BAD1D2FD0538200957343 /* Bsplines.wl */,
 				D54BAD1E2FD0538200957343 /* Bsplines_Demo.nb */,
-				D54BAD1F2FD0538200957343 /* Interpol_Bspline.pdf */,
 				D54BAD202FD0538200957343 /* SplineCurve.wl */,
-				D54BAD212FD0538200957343 /* SplineInterpolation.wl */,
-				D54BAD222FD0538200957343 /* The B-Spline.nb */,
 			);
 			path = Mathematica;
 			sourceTree = "<group>";
